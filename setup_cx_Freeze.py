@@ -6,8 +6,8 @@ from gcalcli import __version__
 #m2
 from cx_Freeze import setup, Executable
 
-buildOptions = dict(zip_include_packages=[], zip_exclude_packages=[], packages=['httplib2', 'six', 'dateutil', 'parsedatetime', 'oauth2client', 'apiclient', 'encodings'], include_msvcr=['True'])
-executables = [Executable("gcalcli\cli.py", targetName = 'lexgoog.exe')]
+buildOptions = dict(zip_include_packages=[], zip_exclude_packages=[], packages=['httplib2', 'six', 'dateutil', 'parsedatetime', 'oauth2client', 'apiclient'])
+executables = [Executable("gcalcli\cli.py", targetName = 'gcalcli.exe')]
 
 try:
     import pypandoc

@@ -3,12 +3,6 @@ from __future__ import print_function
 from setuptools import setup
 from gcalcli import __version__
 
-#m2
-from cx_Freeze import setup, Executable
-
-buildOptions = dict(zip_include_packages=[], zip_exclude_packages=[], packages=['httplib2', 'six', 'dateutil', 'parsedatetime', 'oauth2client', 'apiclient', 'encodings'], include_msvcr=['True'])
-executables = [Executable("gcalcli\cli.py", targetName = 'lexgoog.exe')]
-
 try:
     import pypandoc
     long_description = pypandoc.convert('README.md', 'rst',
@@ -57,7 +51,4 @@ setup(name='gcalcli',
           "License :: OSI Approved :: MIT License",
           "Programming Language :: Python :: 2.7",
           "Programming Language :: Python :: 3",
-      ],
-      #m2
-      executables=executables,
-      options=dict(build_exe=buildOptions))
+      ])
