@@ -19,7 +19,12 @@
 # Everything you need to know (Google API Calendar v3): http://goo.gl/HfTGQ #
 #                                                                           #
 #############################################################################
+
 from __future__ import absolute_import, print_function
+
+# m2: specify the path to certificates (-> current dir)
+import ca_certs_locater
+ca_certs_locater.get = lambda : "cacerts.txt"
 
 import os
 import signal
